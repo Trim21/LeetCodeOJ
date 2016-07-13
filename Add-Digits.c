@@ -10,14 +10,13 @@ Given num = 38, the process is like: 3 + 8 = 11, 1 + 1 = 2. Since 2 has only one
 int addDigits(int num) {
     int count=0;
     do{
-        while(num>0){
-
-        count+=num%10;
-        num=num/10;
-        }
+        count=0;
+        do{
+            count+=num%10;
+            num=num/10;
+        }while(num>0);
     num=count;
-    }while(num>=10)
+    }while(num>=10);
 
     return count;
 }
-//time limit
